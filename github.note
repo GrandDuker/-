@@ -1,0 +1,37 @@
+用户名：GrandDuker
+密  码：duke13249008893
+邮  箱：dcj_ican@136.com
+1:克隆项目到本地
+     git clone https://github.com/GrandDuker/python.git  
+2.生成ssh key：终端使用命令 
+     ssh-keygen -t rsa -C "dcj_ican@136.com"
+     默认在用户文件夹中的 .ssh/id_rsa.pub
+3.添加SSH key：回到github，进入Account Settings，左边选择SSH Keys，Add SSH Key，title随便填，粘贴你的key
+4.测试ssh key是否成功：使用命令
+     ssh -T git@github.com
+     如果出现You’ve successfully authenticated, but GitHub does not provide shell access 。这就表示已成功连上github。如果出现“Agent admitted failure to sign using the key.Permission denied (publickey).”这个错误的话，在命令行下执行
+     ssh -add
+5.配置Git的配置文件，username和email：
+     git config --global user.name "GrandDuker"   //配置用户名
+     git config --global user.email "dcj_ican@136.com"    //配置email
+6.在Git上添加一个Repository  名字自由取
+7.利用Git从本地上传到GitHub
+     7.1.进入要所要上传文件的目录输入命令
+     7.2 创建一个本地仓库，使用命令
+          git init 
+          git remote add origin git@github.com:GrandDuker/yourRepo.git
+          其中youName是你的GitHub的用户名，yourRepo是你要上传到GitHub的仓库
+     7.3 添加一个文件xxx到本地仓库，使用命令
+          git add xxx
+          也可以使用
+          git add .           自动判断添加哪些文件
+     7.4.把这个添加提交到本地的仓库，使用命令
+          git commit -m "提交的说明信息”
+          git push -u origin master
+          如果出现错误：无法推送一些引用到 'git@github.com:yourname/xxx.git'提示：更新被拒绝，因为远程版本库包含您本地尚不存在的提交。这通常是因为另外一个版本库已向该引用进行了推送。再次推送前，您可能需要先整合远程变更（如 'git pull ...'）：则使用强行更新 +master:
+          git push -u origin +master 
+
+
+
+
+
