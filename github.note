@@ -3,6 +3,19 @@
 邮  箱：dcj_ican@136.com
 1:克隆项目到本地
      git clone https://github.com/GrandDuker/python.git  
+     clone下来之后就能把整个project clone下来了～
+     如果本地的版本不是最新的，可以使用命令
+     git fetch origin
+     把更新的内容合并到本地分支，可以使用命令
+     git merge origin/master
+     10.Git回滚操作
+          10.1.先使用
+          git log
+          查看日志，找到想要回滚的版本:git log
+          10.2.再使用
+          git reset
+          回滚到指定版本，如
+          git reset –hard 4bb7bbc07f4b3792b48a6001bdfcc2b694cd3c81(这一串为commit的值)
 2.生成ssh key：终端使用命令 
      ssh-keygen -t rsa -C "dcj_ican@136.com"
      默认在用户文件夹中的 .ssh/id_rsa.pub
